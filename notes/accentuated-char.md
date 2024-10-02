@@ -14,7 +14,34 @@ Here a a set of regex ranges that cover variantions from latin characters from t
 * [Latin Extended-B](https://en.wikipedia.org/wiki/Latin_Extended-B)
 * [Latin Extended Additional](https://en.wikipedia.org/wiki/Latin_Extended_Additional)
 
-<script src="https://gist.github.com/Karalix/a23db78a64b33f3995957cf9dd196ccb.js"></script>
+```
+a : [À-Åà-åĀ-ąǍǎǞ-ǡǺ-ǻȀ-ȃȦȧȺɐ-ɒḀḁẚẠ-ặ]
+b : [ßƀ-ƅɃɓḂ-ḇ]
+c : [çÇĆ-čƆ-ƈȻȼɔḈḉ]
+d : [ÐðĎ-đƉ-ƍȡɖɗḊ-ḓ]
+e : [È-Ëè-ëĒ-ěƎ-ƐǝȄ-ȇȨȩɆɇɘ-ɞḔ-ḝẸ-ệ]
+f : [ƑƒḞḟ]
+g : [Ĝ-ģƓǤ-ǧǴǵḠḡ]
+h : [Ĥ-ħƕǶȞȟḢ-ḫẖ]
+i : [Ì-Ïì-ïĨ-ıƖƗǏǐȈ-ȋɨɪḬ-ḯỈ-ị]
+j : [ĴĵǰȷɈɉɟ]
+k : [Ķ-ĸƘƙǨǩḰ-ḵ]
+l : [Ĺ-łƚȴȽɫ-ɭḶ-ḽ]
+m : [Ɯɯ-ɱḾ-ṃ]
+n : [ÑñŃ-ŋƝƞǸǹȠȵɲ-ɴṄ-ṋ]
+o : [Ò-ÖØò-öøŌ-őƟ-ơǑǒǪ-ǭǾǿȌ-ȏȪ-ȱṌ-ṓỌ-ợ]
+p : [ƤƥṔ-ṗ]
+q : []
+r : [Ŕ-řƦȐ-ȓɌɍṘ-ṟ]
+s : [Ś-šƧƨȘșȿṠ-ṩ]
+t : [Ţ-ŧƫ-ƮȚțȾṪ-ṱẗ]
+u : [Ù-Üù-üŨ-ųƯ-ƱǓ-ǜȔ-ȗɄṲ-ṻỤ-ự]
+v : [ƲɅṼ-ṿ]
+w : [ŴŵẀ-ẉẘ]
+x : [Ẋ-ẍ]
+y : [ÝýÿŶ-ŸƔƳƴȲȳɎɏẎẏỲ-ỹỾỿẙ]
+z : [Ź-žƵƶɀẐ-ẕ]
+```
 
 This was visually verified using [https://regex101.com/r/vaN0J8/1](https://regex101.com/r/vaN0J8/1). 
 If you spot any error, please let me know on the [gist directly](https://gist.github.com/Karalix/a23db78a64b33f3995957cf9dd196ccb).

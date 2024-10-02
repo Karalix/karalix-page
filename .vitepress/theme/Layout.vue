@@ -34,19 +34,6 @@ const { site, frontmatter } = useData()
           </div>
         </div>
       </a>
-      <a href="/notes" class="sm:row-span-2 sm:col-span-2">
-        <div class="card hover:shadow-xl transition-all group hover:bg-gray-50">
-          <div class="card-body">
-            <h2 class="card-title">Notes</h2>
-            <div class="prose group-hover:translate-x-4 transition-all">
-              <ul>
-                <li v-for="note of fiveLastNotes" ><a :href="note.url" class="no-underline hover:font-bold">{{ note.title }}</a></li>
-                <li>...</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </a>
       <a href="/library" class="row-span-1">
         <div class="card hover:shadow-xl transition-all group hover:bg-gray-50">
           <div class="card-body">
@@ -112,6 +99,19 @@ const { site, frontmatter } = useData()
           </a>
         </div>
       </div>
+      <a href="/notes" class="sm:row-span-2 sm:col-span-2">
+        <div class="card hover:shadow-xl transition-all group hover:bg-gray-50">
+          <div class="card-body">
+            <h2 class="card-title">Notes</h2>
+            <div class="prose group-hover:translate-x-4 transition-all">
+              <ul>
+                <li v-for="note of fiveLastNotes" ><a :href="note.url" class="no-underline hover:font-bold">{{ note.title }}</a></li>
+                <li>...</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </a>
       <div class="card hover:shadow-xl transition-all group hover:bg-gray-50">
         <div class="card-body">
           <h2 class="card-title">Contactez-moi</h2>

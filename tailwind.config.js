@@ -2,22 +2,16 @@
 import daisyui from 'daisyui'
 import typography from '@tailwindcss/typography'
 
-module.exports = {
+export default {
+  content: [
+    './.vitepress/**/*.{html,js,ts,vue}',
+    './notes/*.md',
+    './cours/*.md',
+    './*.md',
+  ],
   theme: {
     extend: {},
   },
   plugins: [typography, daisyui],
-  purge: {
-    enabled: process.env.NODE_ENV === 'production',
-    content: [
-      './.vitepress/**/*.js',
-      './.vitepress/**/*.vue',
-      './.vitepress/**/*.ts',
-      './**/*.md',
-    ],
-    options: {
-      safelist: ['html', 'body'],
-    },
-  },
 }
 

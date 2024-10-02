@@ -4,7 +4,7 @@ layout: article
 date: "2021-01-07"
 ---
 
-In [Overleaf](www.overleaf.com) or maybe another LaTeX editor, if like me you only used `\cite{...}` instead of `~\cite{...}` and your advisor cracks down on you because it should be with a space before de square brackets [1] and not the other way[2], fear no more.
+In [Overleaf](https://www.overleaf.com) or maybe another LaTeX editor, if like me you only used `\cite{...}` instead of `~\cite{...}` and your advisor cracks down on you because it should be with a space before de square brackets [1] and not the other way[2], fear no more.
 
 The search and replace tool of Overleaf leverages all the power of regexes. Lets add a `~` character before all the `\cite` that do not have one yet.
 
