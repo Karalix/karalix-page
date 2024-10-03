@@ -26,6 +26,11 @@ const { site, frontmatter } = useData()
             alt="Ma tronche et mon petit chat noir qui s'appelle Nuit" />
         <h1 class="absolute bottom-4 left-4 font-bold text-white transition-all translate-y-10 group-hover:-translate-y-2">{{ site.title }}</h1>
       </div>
+      <div class="card md:col-span-3 sm:col-span-2 row-span-2 hover:shadow-xl transition-all group hover:bg-gray-50">
+        <div class="card-body">
+          <Content class="prose"/>
+        </div>
+      </div>
       <a href="/cv" class="row-span-1">
         <div class="card hover:shadow-xl transition-all group hover:bg-gray-50 h-max">
           <div class="card-body">
