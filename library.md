@@ -68,9 +68,10 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
 📗 | Requiem infernal
 📗 | Vita Nostra ⭐⭐
 📗 | Les fantômes de Gaunt 1 ⭐
+📗 | Le problème à 3 corps 1 ⭐⭐
 📖 | Avers
 📖 | L'idiot
-📕 | Le problème à 3 corps
+📖 | Le problème à 3 corps
 📕 | La Cité du Sud 2
 📕 | Alix Sénateur
 📕 | Attack on Titan
