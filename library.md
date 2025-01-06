@@ -70,8 +70,11 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
 📗 | Les fantômes de Gaunt 1 ⭐
 📗 | Le problème à 3 corps 1, 2 ⭐⭐
 📗 | Capitale du Sud 2 ⭐⭐
+📗 | Capitale du Nord 1 ⭐
+📗 | Hikaru No Go ⭐⭐
+📖 | Capitale du Nord 2
 📕 | Le problème à 3 corps 3
-📕 | Capitale du Nord 1, 2 & 3
+📕 | Capitale du Nord 3
 📕 | Capitale du Sud 3
 📕 | Les Mondes d'Aria : Le serment des Runes
 📕 | Alix Sénateur
