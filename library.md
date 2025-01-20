@@ -72,6 +72,7 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
 📗 | Capitale du Sud 2 ⭐⭐
 📗 | Capitale du Nord 1 ⭐
 📗 | Hikaru No Go ⭐⭐
+📗 | Assassinorum : Faiseurs de roi ⭐⭐
 📖 | Capitale du Nord 2
 📕 | Le problème à 3 corps 3
 📕 | Capitale du Nord 3
