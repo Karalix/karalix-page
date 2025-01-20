@@ -22,6 +22,7 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
   - Fantômes de Gaunt
   - Trilogie Eisenhorn
   - Trilogie Ravenor
+  - Assassinorum : Faiseurs de roi
 - Avers
 - Les lames du cardinal
 - Haut Royaume
