@@ -125,7 +125,7 @@ Interactive desk interface enabling exploration and search in digital collection
 
 *January 2020*
 
-[Repo here]([http://www.krlx.fr/feu-analytics/index.html](https://github.com/Karalix/feu-analytics))
+[Repo here]([https://github.com/Karalix/feu-analytics](https://github.com/Karalix/feu-analytics))
 
 An analytics solution self-hosted on Firebase, that does not collect any personal information. Use it at your own risk.
 
