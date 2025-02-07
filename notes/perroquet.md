@@ -23,8 +23,8 @@ Une fois que les joueurs ont réussi sur cette île à armer leur navire, la men
 Ce jeu d'aventure est avant tout un bon prétexte pour boire du rhum et passer une bonne soirée. La meneuse ne doit pas hésiter à augmenter la difficulté des défis pour encourager la consommation d'alcool ou inversement. De la même manière, le combat final du jeu peut être déclenché même si toutes les îles n'ont pas été explorées en fonction de l'énergie autour de la table.
 
 ## Matériel
-- Cartes pour les équipement ([page 1](https://github.com/Karalix/Karalix.github.io/files/11649657/equipement.1.pdf), [page 2](https://github.com/Karalix/Karalix.github.io/files/11649676/equipement.2.pdf))
-- Cartes pour les tatouages ([tatouage.pdf](https://github.com/Karalix/Karalix.github.io/files/11649790/tatouage.pdf))
+- Cartes pour les équipement ([page 1](https://github.com/Karalix/Karalix.github.io/11649657/equipement.1.pdf), [page 2](https://github.com/Karalix/Karalix.github.io/11649676/equipement.2.pdf))
+- Cartes pour les tatouages ([tatouage.pdf](https://github.com/Karalix/Karalix.github.io/11649790/tatouage.pdf))
 - Carte de l'archipel (voir ci-dessus)
 - 30-40 pièces (moi j'ai utilisé [celles-ci](https://www.amazon.fr/PIRATES-PAQUET-PIECES-DOR-PLASTIQUE/dp/B00NGP6208) c'était super)
 - 1 tricorne pour le capitaine (optionel, mais stylé)

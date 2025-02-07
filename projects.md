@@ -7,7 +7,7 @@ layout: page
 
 *January 2022 - ongoing*
 
-![Hormur PWA screenshots](/files/hormur.png)
+![Hormur PWA screenshots](/hormur.png)
 
 [The website here](https://hormur.com/)
 
@@ -21,7 +21,7 @@ Since 2022 I am the main frontend developer for the startup [Hormur](https://hor
 
 *October 2023*
 
-![Fournier's Severity Index Calculator](/files/deviceframes-habilitrak.png)
+![Fournier's Severity Index Calculator](/deviceframes-habilitrak.png)
 
 [Demo here](https://habilitrak.krlx.fr/)
 
@@ -41,7 +41,7 @@ Initially a missed opportunity for a freelance mission, I found the idea interes
 
 *March 2020*
 
-![Fournier's Severity Index Calculator](/files/fournier.png)
+![Fournier's Severity Index Calculator](/fournier.png)
 
 [Demo here](https://loving-ride-53e79f.netlify.app/#/)
 
@@ -62,7 +62,7 @@ From this time consuming and repetitive task, we thought that it would be helpfu
 
 *March 2019 - July 2021*
 
-![Explore v2](/files/explore.gif)
+![Explore v2](/explore.gif)
 
 [Demo here](https://aa.placed.eu/#/series)
 
@@ -79,7 +79,7 @@ It has been in use for 6 months in Denmark and Sweden. The deployment is current
 
 *April 2018 - February 2019*
 
-![Explore v1](/files/explore1.png)
+![Explore v1](/explore1.png)
 
 [Demo here](https://explore.placed.eu/#/5214)
 
@@ -110,7 +110,7 @@ Research prototype questionning what can be gained from using digital tools whil
 
 *February 2017 - July 2017 - now*
 
-<!-- ![Bibliotouch](/files/agenda-bibliotouch.jpg)-->
+<!-- ![Bibliotouch](/agenda-bibliotouch.jpg)-->
 ![Demo Bibliotouch](https://user-images.githubusercontent.com/5560197/172401198-6a126d29-06da-4e10-91fc-d64724a18484.gif)
 
 [~Demo here~ (unfortunately not hosted anymore)](https://bibliotouch.enssib.fr)

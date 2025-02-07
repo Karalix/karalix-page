@@ -2,14 +2,14 @@
 title: "Segmentum Bagarrus"
 layout: article
 date: "2023-11-27"
-hero: "/files/hero-bagarrus.jpg"
+hero: "/hero-bagarrus.jpg"
 ---
 
 Bienvenue sur la page du Segmentum Bagarrus, un secteur de la galaxie ravagé par la guerre éternelle du 41ème millénaire, peuplé de généraux tout aussi ravagés.
 
 ## Liens indispensables
-- Les [règles abbrégées](/files/kt-lite.pdf) de KillTeam en français
-- Les [règles complètes](/files/40k-core.pdf) de 40k en français
+- Les [règles abbrégées](/kt-lite.pdf) de KillTeam en français
+- Les [règles complètes](/40k-core.pdf) de 40k en français
 - Les règles complètes de 40k et KillTeam en anglais : [Wahapedia](https://wahapedia.ru/)
 - Le [plannificateur d'équipe](https://kt.wargamebuilder.com/fr) et les [règles d'équipes](https://kt.wargamebuilder.com/fr/killteam/view) de KillTeam en français
 

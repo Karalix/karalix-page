@@ -86,7 +86,7 @@ a {
                 >
                     <img
                         class="w-full h-full object-cover group-hover:brightness-90 transition-all"
-                        src="/files/profil.jpg"
+                        src="/profil.jpg"
                         alt="Ma tronche et mon petit chat noir qui s'appelle Nuit"
                     />
                     <h1

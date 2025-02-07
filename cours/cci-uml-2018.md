@@ -24,7 +24,7 @@ Cours co-encadré avec [Valentin Lachand](https://valentin.lachand.net), basé s
 
 Supports distribués en début de TD.
 
-* Cas d’Utilisation, [complément de correction du TD](/files/TD-CU.pdf)
+* Cas d’Utilisation, [complément de correction du TD](/TD-CU.pdf)
 * Mise en pratique de SCRUM
 
 ## Ressource utile
