@@ -22,6 +22,7 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
   - Fantômes de Gaunt
   - Trilogie Eisenhorn
   - Trilogie Ravenor
+  - Assassinorum : Faiseurs de roi
 - Avers
 - Les lames du cardinal
 - Haut Royaume
@@ -34,17 +35,26 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
 ## Pile de lecture
 2021 et 2022 a été marqué par le renouveau du plaisir de lecture (ou plutôt des lectures de plaisir). Cette liste me permet de suivre mon avancée. Tout ce qui est ci-dessous est probablement disponible au prêt ou autre partage 🏴 ci-dessus.
 
+*Système de notation* :
+- ❌ Ne lisez pas ce livre, c'est mauvais
+-    Ce livre était ok, mais ce n'est pas une recommandation 
+- ⭐ C'est un bon livre qui mérite d'être lu
+- ⭐⭐ C'est un super livre, qui m'a fait passer un très bon moment et probablement manquer de sommeil
+- ⭐⭐⭐ C'est un chef d'œuvre pour une raison ou pour une autre que je garderai dans mon cœur 
+
 État | Titre
 ---|---
 📗 | Harry Potter et les Méthodes de la Rationalité ⭐⭐⭐
+📗 | De cape et de croc ⭐⭐⭐
+📗 | Les Indes Fourbes ⭐⭐
 📗 | Janua Vera ⭐⭐
 📗 | Gagner la Guerre ⭐⭐⭐
 📗 | Seul sur Mars ⭐⭐
 📗 | Artémis ❌
 📗 | Ender 1 ⭐⭐⭐
 📗 | Le Nom du Vent 1 & 2 ⭐⭐⭐
-📗 | Dune 1 ⭐⭐⭐
-📗 | Assassin Royal Cycle 1 ⭐
+📗 | Dune 1 ⭐⭐ 
+📗 | Assassin Royal Cycle 1 ⭐⭐ 
 📗 | Capitale du Sud 1 ⭐
 📗 | Ceux qui restent⭐⭐⭐ 
 📗 | Le livre des Martyrs
@@ -70,8 +80,12 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
 📗 | Les fantômes de Gaunt 1 ⭐
 📗 | Le problème à 3 corps 1, 2 ⭐⭐
 📗 | Capitale du Sud 2 ⭐⭐
-📕 | Le problème à 3 corps 3
-📕 | Capitale du Nord 1, 2 & 3
+📗 | Capitale du Nord 1 ⭐
+📗 | Hikaru No Go ⭐⭐
+📗 | Assassinorum : Faiseurs de roi ⭐⭐
+📖 | Capitale du Nord 2
+📖 | Le problème à 3 corps 3
+📕 | Capitale du Nord 3
 📕 | Capitale du Sud 3
 📕 | Les Mondes d'Aria : Le serment des Runes
 📕 | Alix Sénateur
