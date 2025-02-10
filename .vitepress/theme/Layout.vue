@@ -308,7 +308,7 @@ a {
             </div>
         </div>
         <div v-else>
-            <a class="btn cursor-none fixed left-8 bottom-8 sm:top-8 z-20" href="/">Retour</a>
+            <a class="btn cursor-none fixed left-8 bottom-8 sm:top-8 z-20" href="/">Retour à l'accueil</a>
         </div>
         <div v-if="frontmatter.notelist">
             <div class="prose mx-auto p-4 my-12">
@@ -329,6 +329,17 @@ a {
         <div v-if="frontmatter.layout === 'article'">
             <div class="prose mx-auto p-4 my-12">
                 <Content />
+                <div class="my-8 flex flex-row items-center space-x-4">
+                    <img
+                        class="w-28 h-28 rounded-full object-cover brightness-90 transition-all"
+                        src="/profil.jpg"
+                        alt="Ma tronche et mon petit chat noir qui s'appelle Nuit"
+                    />
+                    <div class="text-sm">
+                        Écrit par <a href="/">Alix Ducros</a> le {{ frontmatter.date }}<br />
+                        Développement Web, recherche UX, design ludique ou cuisine, n'hésitez pas à me contacter pour discuter de vos projets ou de vos idées.
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -37,7 +37,7 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
 
 *Système de notation* :
 - ❌ Ne lisez pas ce livre, c'est mauvais
--    Ce livre était ok, mais ce n'est pas une recommandation 
+- 😐  Ce livre était ok, mais ce n'est pas une recommandation 
 - ⭐ C'est un bon livre qui mérite d'être lu
 - ⭐⭐ C'est un super livre, qui m'a fait passer un très bon moment et probablement manquer de sommeil
 - ⭐⭐⭐ C'est un chef d'œuvre pour une raison ou pour une autre que je garderai dans mon cœur 
@@ -57,8 +57,8 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
 📗 | Assassin Royal Cycle 1 ⭐⭐ 
 📗 | Capitale du Sud 1 ⭐
 📗 | Ceux qui restent⭐⭐⭐ 
-📗 | Le livre des Martyrs
-📗 | Ephraël Stern
+📗 | Le livre des Martyrs 😐
+📗 | Ephraël Stern 😐
 📗 | Constantin de Chamberly ⭐
 📗 | Out There ⭐
 📗 | Salambô ⭐⭐⭐
@@ -69,21 +69,20 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
 📗 | L'enfant bleu ⭐
 📗 | La fille de la Supérette ⭐
 📗 | Les 4 enquêtrices de la supérette Gwangseon ⭐
-📗 | Marque de Foi
+📗 | Marque de Foi 😐
 📗 | Le lecteur de cadavres ⭐⭐
 📗 | Effroyables jardins ⭐⭐
 📗 | Ravenor 1, 2 & 3 ⭐
 📗 | Les lames du cardinal 1, 2 & 3 ⭐
 📗 | Bequin 1 & 2 ⭐
-📗 | Requiem infernal
+📗 | Requiem infernal 😐
 📗 | Vita Nostra ⭐⭐
 📗 | Les fantômes de Gaunt 1 ⭐
 📗 | Le problème à 3 corps 1, 2 ⭐⭐
 📗 | Capitale du Sud 2 ⭐⭐
-📗 | Capitale du Nord 1 ⭐
+📗 | Capitale du Nord 1, 2 ⭐
 📗 | Hikaru No Go ⭐⭐
 📗 | Assassinorum : Faiseurs de roi ⭐⭐
-📖 | Capitale du Nord 2
 📖 | Le problème à 3 corps 3
 📕 | Capitale du Nord 3
 📕 | Capitale du Sud 3
