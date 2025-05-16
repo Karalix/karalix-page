@@ -3,6 +3,8 @@ title: "Curriculum Vitae"
 layout: page
 ---
 
+You may download my CV in PDF format [here](/cv-alix-ux-en.pdf).
+
 ## Lead Frontend Engineer
 
 *January 2022 - now*
