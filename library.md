@@ -54,8 +54,7 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
 📗 | Ender 1 ⭐⭐⭐
 📗 | Le Nom du Vent 1 & 2 ⭐⭐⭐
 📗 | Dune 1 ⭐⭐ 
-📗 | Assassin Royal Cycle 1 ⭐⭐ 
-📗 | Capitale du Sud 1 ⭐
+📗 | Assassin Royal Cycle 1 ⭐⭐
 📗 | Ceux qui restent⭐⭐⭐ 
 📗 | Le livre des Martyrs 😐
 📗 | Ephraël Stern 😐
@@ -78,14 +77,13 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
 📗 | Requiem infernal 😐
 📗 | Vita Nostra ⭐⭐
 📗 | Les fantômes de Gaunt 1 ⭐
-📗 | Le problème à 3 corps 1, 2 ⭐⭐
-📗 | Capitale du Sud 2 ⭐⭐
+📗 | Le problème à 3 corps 1, 2, 3 ⭐⭐
+📗 | Capitale du Sud 1, 2, 3 ⭐⭐
 📗 | Capitale du Nord 1, 2 ⭐
 📗 | Hikaru No Go ⭐⭐
 📗 | Assassinorum : Faiseurs de roi ⭐⭐
-📖 | Le problème à 3 corps 3
+📖 | Sainte Célestine 😐
 📕 | Capitale du Nord 3
-📕 | Capitale du Sud 3
 📕 | Les Mondes d'Aria : Le serment des Runes
 📕 | Alix Sénateur
 📕 | Attack on Titan
