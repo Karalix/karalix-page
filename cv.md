@@ -3,7 +3,7 @@ title: "Curriculum Vitae"
 layout: page
 ---
 
-You may download my CV in PDF format [here](/cv-alix-ux-en.pdf).
+You may download my CV in PDF format [here (ux)](/cv-alix-ux-en.pdf) or [here(frontend)](/cv-alix-front-en.pdf).
 
 ## Lead Frontend Engineer
 
