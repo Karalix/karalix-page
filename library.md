@@ -24,6 +24,7 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
   - Trilogie Ravenor
   - Assassinorum : Faiseurs de roi
 - Avers
+- The Will of the Many
 - Les lames du cardinal
 - Haut Royaume
 - Le Chevalier Aux Épines 
