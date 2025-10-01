@@ -82,7 +82,10 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
 📗 | Capitale du Nord 1, 2 ⭐
 📗 | Hikaru No Go ⭐⭐
 📗 | Assassinorum : Faiseurs de roi ⭐⭐
+📗 | The Will of the Many ⭐⭐
 📖 | Sainte Célestine 😐
+📖 | L'heure des prédateurs ⭐
+📕 | Le mage du Kremlin
 📕 | Capitale du Nord 3
 📕 | Les Mondes d'Aria : Le serment des Runes
 📕 | Alix Sénateur
