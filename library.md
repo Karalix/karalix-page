@@ -84,8 +84,9 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
 📗 | Hikaru No Go ⭐⭐
 📗 | Assassinorum : Faiseurs de roi ⭐⭐
 📗 | The Will of the Many ⭐⭐
+📗 | L'heure des prédateurs ⭐
+📗 | Comment vaincre un Roi Démon en 10 étapes ⭐ 
 📖 | Sainte Célestine 😐
-📖 | L'heure des prédateurs ⭐
 📕 | Le mage du Kremlin
 📕 | Capitale du Nord 3
 📕 | Les Mondes d'Aria : Le serment des Runes
