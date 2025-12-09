@@ -5,13 +5,25 @@ layout: page
 
 You may download my CV in PDF format [here (ux)](/cv-alix-ux-en.pdf) or [here(frontend)](/cv-alix-front-en.pdf).
 
+## Freelance frontend engineer
+
+*July 2025 - now*
+
+[@AlphaValue](https://www.alphavalue.com/)
+
+AlphaValue is an independent European equity research firm that provides fundamental analysis and standardized valuations on over 500 European stocks.
+I was the lead developer for the new version of AlphaValue's main website. It is a Nuxt 3 PWA with a focus on responsive content from smartphones to extremely large screens, updated modern design, and interactive charts.
+
+**Keywords :** *Nuxt*, *UX*, *dataviz*, *Typesript*, *PWA*
+
+
 ## Lead Frontend Engineer
 
 *January 2022 - now*
 
 [@Hormur](https://hormur.com)
 
-Development the frontend side of [Hormur](https://hormur.com): auth, forms, maps, ticketing system, messenger, backoffice, etc. I also conduct targeted UX research and design tasks: homepage, user onboarding, customer journey, and user interviews.
+Development of the frontend side of [Hormur](https://hormur.com): auth, forms, maps, ticketing system, messenger, backoffice, etc. I also conduct targeted UX research and design tasks: homepage, user onboarding, customer journey, and user interviews.
 
 **Keywords :** *startup*, *UX*, *Nuxt*, *PWA*, *Rest*
 

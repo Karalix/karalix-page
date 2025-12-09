@@ -3,6 +3,16 @@ title: "Projects"
 layout: page
 ---
 
+## My Tiny Café
+
+*March 2025 - ongoing*
+
+![Landing page for My Tiny Café](/public/mytinycafe.png)
+
+[The app is available here (it's free!)](https://mytinycafe.com/)
+
+My Tiny Café is a project I built specifically for my family—my daughter and my wife—so they could easily order hot beverages the moment they come back home. Honestly, sending a text usually resulted in too little information about what they really wanted. Now, they use a custom interface to place their exact, personalized order. Plus, it just feels much more professional, which is a fun little perk! We live in a small, remote town, and using this system makes our home feel just like a fancy coffee shop. If you also feel the urge to become a home barista for your friends and family, why not check it out? [My Tiny Café](https://mytinycafe.com/) is free for all to use!
+
 ## Hormur
 
 *January 2022 - ongoing*
@@ -21,7 +31,7 @@ Since 2022 I am the main frontend developer for the startup [Hormur](https://hor
 
 *October 2023*
 
-![Fournier's Severity Index Calculator](/deviceframes-habilitrak.png)
+![Habilitrak](/deviceframes-habilitrak.png)
 
 [Demo here](https://habilitrak.krlx.fr/)
 
