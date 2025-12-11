@@ -8,12 +8,20 @@ hero: "/hero-bagarrus.jpg"
 Bienvenue sur la page du Segmentum Bagarrus, un secteur de la galaxie ravagé par la guerre éternelle du 41ème millénaire, peuplé de généraux tout aussi ravagés.
 
 ## Liens indispensables
-- Les [règles abbrégées](/kt-lite.pdf) de KillTeam en français
-- Les [règles complètes](/40k-core.pdf) de 40k en français
+- Les [règles abbrégées (V3)](/kt-lite-v3.pdf) de KillTeam en français
+- Les [règles abbrégées (V2)](/kt-lite.pdf) de KillTeam en français
+- Les [règles complètes (V10)](/40k-core.pdf) de 40k en français
 - Les règles complètes de 40k et KillTeam en anglais : [Wahapedia](https://wahapedia.ru/)
 - Le [plannificateur d'équipe](https://kt.wargamebuilder.com/fr) et les [règles d'équipes](https://kt.wargamebuilder.com/fr/killteam/view) de KillTeam en français
 
 ## Évènements
+### Séminaire tactique - 03/01/2026
+Rendez-vous à 8:45 chez les Ducros pour prendre le café/thé et commencer la mise en place des terrains. Fin estimée en début de soirée.
+
+Au programme : parties de KillTeam le matin, une partie spéciale de Red Team l'après midi !
+
+Participants attendus : Charles, JF, Jojo, Joaquim, Jeanne, Marc, Eugène, Alix, Zola
+
 ### Séminaire tactique - 13/08/2024
 Rendez-vous à 8:45 chez les Ducros pour prendre le café/thé et commencer la mise en place des terrains. Fin estimée dans la nuit.
 

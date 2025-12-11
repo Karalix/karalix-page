@@ -5,14 +5,14 @@ layout: page
 
 You may download my CV in PDF format [here (ux)](/cv-alix-ux-en.pdf) or [here(frontend)](/cv-alix-front-en.pdf).
 
-## Freelance frontend engineer
+## Freelance Frontend Engineer
 
 *July 2025 - now*
 
 [@AlphaValue](https://www.alphavalue.com/)
 
-AlphaValue is an independent European equity research firm that provides fundamental analysis and standardized valuations on over 500 European stocks.
-I was the lead developer for the new version of AlphaValue's main website. It is a Nuxt 3 PWA with a focus on responsive content from smartphones to extremely large screens, updated modern design, and interactive charts.
+[AlphaValue](https://www.alphavalue.com/) is an independent European equity research firm that provides fundamental analysis and standardized valuations on over 500 European stocks.
+I am the lead developer for the new version of AlphaValue's main website. It is a Nuxt 3 PWA with a focus on responsive content from smartphones to extremely large screens, updated modern design, and interactive tables and charts.
 
 **Keywords :** *Nuxt*, *UX*, *dataviz*, *Typesript*, *PWA*
 
