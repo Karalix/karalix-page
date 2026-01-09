@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { generateRssFeed } from './generateRss'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -8,4 +9,9 @@ export default defineConfig({
     hostname: 'https://krlx.fr'
   },
   cleanUrls: true,
+  buildEnd: generateRssFeed,
+  head: [
+    ['link', { rel: 'alternate', type: 'application/rss+xml', title: 'RSS Feed', href: '/feed.xml' }],
+    ['link', { rel: 'alternate', type: 'application/atom+xml', title: 'Atom Feed', href: '/feed.atom' }]
+  ]
 })
