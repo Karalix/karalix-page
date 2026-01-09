@@ -215,6 +215,19 @@ a {
                         </div>
                     </div>
                 </a>
+                <a href="https://mytinycafe.com" class="row-span-1">
+                    <div
+                        class="card hover:shadow-xl transition-all group overflow-clip bg-[#8B6F47] hover:bg-[#6F5435]"
+                    >
+                        <div class="card-body flex items-center justify-center">
+                            <img
+                                src="/mytinycafe.png"
+                                alt="My Tiny Café logo"
+                                class="h-20 w-auto transition-all duration-300 group-hover:-translate-y-2 group-hover:scale-105"
+                            />
+                        </div>
+                    </div>
+                </a>
                 <div
                     class="card hover:shadow-xl transition-all group hover:bg-gray-50"
                 >
