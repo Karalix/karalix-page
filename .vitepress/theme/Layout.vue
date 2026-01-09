@@ -63,6 +63,41 @@ body {
 a {
     cursor: none;
 }
+
+/* Coffee steam animation */
+.steam path {
+    opacity: 0;
+}
+
+.group:hover .steam path {
+    animation: steam-rise 2s ease-in-out infinite;
+}
+
+.group:hover .steam .steam-1 {
+    animation-delay: 0s;
+}
+
+.group:hover .steam .steam-2 {
+    animation-delay: 0.4s;
+}
+
+.group:hover .steam .steam-3 {
+    animation-delay: 0.8s;
+}
+
+@keyframes steam-rise {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+}
 </style>
 
 <template>
@@ -220,11 +255,29 @@ a {
                         class="card hover:shadow-xl transition-all group overflow-clip bg-[#8B6F47] hover:bg-[#6F5435]"
                     >
                         <div class="card-body flex items-center justify-center">
-                            <img
-                                src="/mytinycafe.png"
-                                alt="My Tiny Café logo"
-                                class="h-20 w-auto transition-all duration-300 group-hover:-translate-y-2 group-hover:scale-105"
-                            />
+                            <svg viewBox="0 0 100 120" class="h-20 w-auto" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Steam lines -->
+                                <g class="steam">
+                                    <path d="M 30 25 Q 25 15 30 5" stroke="#E8D5C4" stroke-width="2.5" fill="none" stroke-linecap="round" class="steam-1"/>
+                                    <path d="M 50 25 Q 55 15 50 5" stroke="#E8D5C4" stroke-width="2.5" fill="none" stroke-linecap="round" class="steam-2"/>
+                                    <path d="M 70 25 Q 65 15 70 5" stroke="#E8D5C4" stroke-width="2.5" fill="none" stroke-linecap="round" class="steam-3"/>
+                                </g>
+
+                                <!-- Coffee cup -->
+                                <g class="cup">
+                                    <!-- Cup body -->
+                                    <path d="M 20 40 L 25 100 L 75 100 L 80 40 Z" fill="#FFFFFF" stroke="#3E2723" stroke-width="2"/>
+
+                                    <!-- Coffee surface -->
+                                    <ellipse cx="50" cy="40" rx="30" ry="6" fill="#6F4E37" stroke="#3E2723" stroke-width="2"/>
+
+                                    <!-- Cup handle -->
+                                    <path d="M 80 50 Q 95 50 95 65 Q 95 80 80 80" fill="none" stroke="#3E2723" stroke-width="2.5" stroke-linecap="round"/>
+
+                                    <!-- Saucer -->
+                                    <ellipse cx="50" cy="105" rx="40" ry="8" fill="#FFFFFF" stroke="#3E2723" stroke-width="2"/>
+                                </g>
+                            </svg>
                         </div>
                     </div>
                 </a>
