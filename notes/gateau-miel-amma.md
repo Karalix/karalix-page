@@ -20,7 +20,7 @@ Recette traditionnelle du gâteau au miel de Amma.
 ## Ingrédients
 
 * 5 œufs
-* 250 ml de farine (farine de riz ou farine de blé classique T45/sans gluten)
+* 250 ml de farine de blé T45
 * 125 ml de sucre de canne roux
 * 2 cuillères à soupe d'huile (huile d'olive par exemple)
 * 2 cuillères à soupe de miel de longane
