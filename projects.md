@@ -3,6 +3,20 @@ title: "Projects"
 layout: page
 ---
 
+## Citizen Science
+
+*July 2025 - unpublished*
+
+<img width="2546" height="1684" alt="image" src="https://github.com/user-attachments/assets/5bd7aed4-a1e9-4527-9f4b-18c1c0ccf9a1" />
+
+[The WIP prototype is available here](https://wonderful-yeot-135f28.netlify.app/)
+
+If you are a researcher in social science you are maybe already used to the terme "Citizen Science". Turns out there is a plethora of similar terms describing this concept of conducting research with the participations of non-researchers. Raphaëlle and Mathilde from Université de Bordeaux came up with an index of all the terms used in the scientific literature and gave each term an easy to comprehend explaination. They approached me a few years ago to build an app that would help researchers to find which keywords to use to better reference a paper so it can be searched more easily and maximize its citation count. Unfortunately, the concept behind the app was not mature and it was decided to put a halt to the project. Nonetheless, you can try the work-in-progress prototype [here](https://wonderful-yeot-135f28.netlify.app/) !
+
+**Keywords :** *Nuxt*, *Citizen Science*, *i18n*
+
+----
+
 ## My Tiny Café
 
 *March 2025 - ongoing*
@@ -14,6 +28,8 @@ layout: page
 My Tiny Café is a project I built specifically for my family—my daughter and my wife—so they could easily order hot beverages the moment they come back home. Honestly, sending a text usually resulted in too little information about what they really wanted. Now, they use a custom interface to place their exact, personalized order. Plus, it just feels much more professional, which is a fun little perk! We live in a small, remote town, and using this system makes our home feel just like a fancy coffee shop. If you also feel the urge to become a home barista for your friends and family, why not check it out? [My Tiny Café](https://mytinycafe.com/) is free for all to use!
 
 **Keywords :** *Nuxt*, *PWA*, *Appwrite*, *Vibe*
+
+----
 
 ## Hormur
 
