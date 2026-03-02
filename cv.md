@@ -12,9 +12,9 @@ You may download my CV in PDF format [here (ux)](/cv-alix-ux-en.pdf) or [here(fr
 [@AlphaValue](https://www.alphavalue.com/)
 
 [AlphaValue](https://www.alphavalue.com/) is an independent European equity research firm that provides fundamental analysis and standardized valuations on over 500 European stocks.
-I am the lead developer for the new version of AlphaValue's main website. It is a Nuxt 3 PWA with a focus on responsive content from smartphones to extremely large screens, updated modern design, and interactive tables and charts.
+I am the main developer for the new version of AlphaValue's main website. It is a Nuxt 4 PWA with a focus on responsive content spanning from smartphones to extremely large screens, updated modern design, and interactive tables and charts.
 
-**Keywords :** *Nuxt*, *UX*, *dataviz*, *Typesript*, *PWA*
+**Keywords :** *Nuxt*, *UX*, *dataviz*, *Typesript*, *PWA*, *HighCharts*, *Claude Code*
 
 
 ## Lead Frontend Engineer
@@ -130,3 +130,4 @@ Development of a C++ application retrieving measures from several radars, then d
 Development of realtime C++ applications, Linux systems administration
 
 **Keywords :** *C/C++*, *Qt*, *Linux*
+
