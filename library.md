@@ -86,8 +86,10 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
 📗 | The Will of the Many ⭐⭐
 📗 | L'heure des prédateurs ⭐
 📗 | Comment vaincre un Roi Démon en 10 étapes ⭐ 
-📖 | Sainte Célestine 😐
-📕 | Le mage du Kremlin
+📗 | Les annales de la compagnie noire 1,2,3,4 ⭐⭐
+📕 | Sainte Célestine 😐
+📖 | Les annales de la compagnie noire 5
+📖 | Le mage du Kremlin
 📕 | Capitale du Nord 3
 📕 | Les Mondes d'Aria : Le serment des Runes
 📕 | Alix Sénateur
