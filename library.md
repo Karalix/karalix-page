@@ -41,7 +41,7 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
 - 😐  Ce livre était ok, mais ce n'est pas une recommandation 
 - ⭐ C'est un bon livre qui mérite d'être lu
 - ⭐⭐ C'est un super livre, qui m'a fait passer un très bon moment et probablement manquer de sommeil
-- ⭐⭐⭐ C'est un chef d'œuvre pour une raison ou pour une autre que je garderai dans mon cœur 
+- ⭐⭐⭐ C'est, pour moi, un chef d'oeuvre 
 
 État | Titre
 ---|---
@@ -86,9 +86,9 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
 📗 | The Will of the Many ⭐⭐
 📗 | L'heure des prédateurs ⭐
 📗 | Comment vaincre un Roi Démon en 10 étapes ⭐ 
-📗 | Les annales de la compagnie noire 1,2,3,4 ⭐⭐
+📗 | Les annales de la compagnie noire 1, 2, 3, 4, 5 ⭐⭐
 📕 | Sainte Célestine 😐
-📖 | Les annales de la compagnie noire 5
+📖 | Les annales de la compagnie noire 6
 📖 | Le mage du Kremlin
 📕 | Capitale du Nord 3
 📕 | Les Mondes d'Aria : Le serment des Runes
