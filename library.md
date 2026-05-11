@@ -9,6 +9,13 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
 
 [La Bible relue par Dieu](https://drive.proton.me/urls/KPQH3SF69W#t6MjcUxgsenh)
 
+## Témoignages
+
+Récit en deux parties de mon ami Victorin, parti à Calais pour aider les migrants, qui témoigne des traitements inhumains qui leur sont infligés.
+
+- [Lettres calaisiennes — Première partie](/Lettres%20calaisiennes%20-%20Premi%C3%A8re%20partie.pdf)
+- [Lettres calaisiennes — Deuxième partie](/Lettres%20calaisiennes%20-%20Deuxi%C3%A8me%20partie.pdf)
+
 ## Epub
 
 [Dossier Proton](https://drive.proton.me/urls/HVD02GVTVR#RN1gy6yDMbaQ)
