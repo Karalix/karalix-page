@@ -63,6 +63,41 @@ body {
 a {
     cursor: none;
 }
+
+/* Coffee steam animation */
+.steam path {
+    opacity: 0;
+}
+
+.group:hover .steam path {
+    animation: steam-rise 2s ease-in-out infinite;
+}
+
+.group:hover .steam .steam-1 {
+    animation-delay: 0s;
+}
+
+.group:hover .steam .steam-2 {
+    animation-delay: 0.4s;
+}
+
+.group:hover .steam .steam-3 {
+    animation-delay: 0.8s;
+}
+
+@keyframes steam-rise {
+    0% {
+        opacity: 0;
+        transform: translateY(2px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+}
 </style>
 
 <template>
@@ -212,6 +247,20 @@ a {
                             >
                                 Kronikle
                             </h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://mytinycafe.com" class="row-span-1">
+                    <div
+                        class="card hover:shadow-xl transition-all group overflow-clip bg-[#8B6F47] hover:bg-[#6F5435]"
+                    >
+                        <div class="card-body flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coffee">
+                                <path d="M10 2v2" class="steam steam-2"/>
+                                <path d="M14 2v2" class="steam steam-3"/>
+                                <path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/>
+                                <path d="M6 2v2" class="steam steam-1"/>
+                            </svg>
                         </div>
                     </div>
                 </a>
