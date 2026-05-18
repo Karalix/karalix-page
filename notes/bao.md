@@ -1,6 +1,7 @@
 ---
 title: "Les Baos (et raviolis) de Han Jun (updated)"
 layout: article
+description: "La recette familiale de baos et raviolis taiwanais maison : pâte, garniture et cuisson vapeur."
 date: "2024-02-25"
 ---
 

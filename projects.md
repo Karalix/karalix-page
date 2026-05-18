@@ -1,6 +1,7 @@
 ---
 title: "Projects"
 layout: page
+description: "Projets de développement et de recherche d'Alix Ducros : My Tiny Café, Hormur, Habilitrak, Explore, Bibliotouch."
 ---
 
 ## Citizen Science

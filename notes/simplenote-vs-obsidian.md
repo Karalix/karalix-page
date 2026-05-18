@@ -1,6 +1,7 @@
 ---
 title: "Simplenote"
 layout: article
+description: "Pourquoi Alix a quitté Obsidian (et Google Doc) pour Simplenote : un outil de notes markdown minimaliste et synchronisé."
 date: "2023-01-10"
 ---
 

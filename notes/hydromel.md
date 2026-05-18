@@ -1,6 +1,7 @@
 ---
 title: "Le gallon d'hydromel"
 layout: article
+description: "Fabriquer un gallon d'hydromel maison : matériel, ingrédients et étapes de brassage."
 date: "2024-11-24"
 ---
 

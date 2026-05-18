@@ -1,6 +1,7 @@
 ---
 title: "PhD defence"
 layout: article
+description: "Soutenance de thèse d'Alix Ducros (septembre 2021) sur les affichages publics en bibliothèque : replay vidéo, jury et résumé."
 date: "2021-09-20"
 ---
 

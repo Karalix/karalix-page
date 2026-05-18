@@ -1,6 +1,7 @@
 ---
 title: "Removing Wallpaper Carousel from Xiaomi MIUI"
 layout: article
+description: "Désinstaller le Wallpaper Carousel de MIUI sur les smartphones Xiaomi, en quelques étapes."
 date: "2022-04-27"
 ---
 

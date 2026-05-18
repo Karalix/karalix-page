@@ -12,7 +12,7 @@ export async function generateRssFeed(config: SiteConfig) {
     id: hostname,
     link: hostname,
     language: 'fr',
-    favicon: `${hostname}/favicon.ico`,
+    favicon: `${hostname}/favicon.svg`,
     copyright: `Copyright © ${new Date().getFullYear()} Alix Ducros`,
     feedLinks: {
       rss: `${hostname}/feed.xml`,

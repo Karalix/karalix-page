@@ -1,6 +1,7 @@
 ---
 title: "Publications"
 layout: page
+description: "Publications académiques peer-reviewed d'Alix Ducros en IHM : affichages publics interactifs, bibliothèques et design d'interaction (CHI, DIS, ISS)."
 ---
 ## 2024
 *Ducros Alix, Tabard Aurélien, Dalsgaard Peter, Bats Raphaëlle, and Eriksson Eva* **A design space for event-centric displays in public libraries.** Frontiers in Computer Science, 2024, vol. 6, p. 1250861. DOI: [https://doi.org/10.3389/fcomp.2024.1250861](https://doi.org/10.3389/fcomp.2024.1250861) [OpenAccess](https://www.frontiersin.org/articles/10.3389/fcomp.2024.1250861/pdf?isPublishedV2=False)

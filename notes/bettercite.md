@@ -1,6 +1,7 @@
 ---
 title: "Adding space before citations in LaTeX"
 layout: article
+description: "Ajouter automatiquement une espace insécable avant les \\cite en LaTeX/Overleaf grâce à une recherche par regex."
 date: "2021-01-07"
 ---
 

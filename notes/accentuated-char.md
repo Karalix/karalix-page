@@ -1,6 +1,7 @@
 ---
 title: "Accent insensitive search"
 layout: article
+description: "Implémenter une recherche insensible aux accents et à la casse en SQLite (regex GLOB), illustré avec les contacts Signal."
 date: "2020-11-19"
 ---
 

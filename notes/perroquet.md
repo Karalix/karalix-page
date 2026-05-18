@@ -1,6 +1,7 @@
 ---
 title: "L'Île du Perroquet"
 layout: article
+description: "L'Île du Perroquet : un jeu de rôle one-shot d'aventure pirate festif, conçu pour une meneuse novice."
 date: "2023-06-05"
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Xiaomi Share & Windows"
 layout: article
+description: "Utiliser Xiaomi Share (Mi Smart Share) pour transférer des fichiers entre un PC Windows et un smartphone Xiaomi."
 date: "2020-11-18"
 ---
 

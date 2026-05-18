@@ -1,6 +1,7 @@
 ---
 title: "Citation dans le texte avec Obsidian"
 layout: article
+description: "Insérer de jolis blocs de citation et notes de bas de page dans Obsidian à partir de Zotero."
 date: "2022-05-20"
 ---
 

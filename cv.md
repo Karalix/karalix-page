@@ -1,6 +1,7 @@
 ---
 title: "Curriculum Vitae"
 layout: page
+description: "Le parcours professionnel d'Alix Ducros : Lead Frontend Engineer (Nuxt, Vue, TypeScript), freelance et ancien doctorant en IHM."
 ---
 
 You may download my CV in PDF format [here (ux)](/cv-alix-ux-en.pdf) or [here(frontend)](/cv-alix-front-en.pdf).

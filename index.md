@@ -1,5 +1,6 @@
 ---
 home: true
+description: "Alix Ducros (krlx), Lead Frontend Engineer (Nuxt, Vue, TypeScript) et ancien chercheur en IHM. Portfolio, projets, publications académiques et notes de blog."
 ---
 
 Je travaille actuellement sur de supers projets Nuxt pour [AlphaValue, des analystes financiers](https://alphavalue.com) avec la startup [Hormur, la plateforme d'évènement à domicile](https://hormur.com), mais aussi sur un outil de gestion des affichages publics pour les événements culturels issu de mon doctorat [Kronikle](https://kronikle.eu).

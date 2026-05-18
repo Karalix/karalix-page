@@ -1,12 +1,11 @@
 ---
 title: "Comment My Tiny Café a eu un buzz modéré sur Hacker News"
 layout: article
+description: "Le récit du lancement de My Tiny Café, une PWA perso, et de son buzz modéré sur Hacker News : genèse et leçons."
 date: "2026-01-29"
 ---
 
 # Comment My Tiny Café a eu un buzz modéré sur Hacker News
-
-*English version below*
 
 Dimanche dernier, pour la première fois, j'ai partagé publiquement un projet perso sur un thread "What are you working on?" de Hacker News. Une application toute bête qui permet à mon épouse de me commander un café comme si j'étais un barista pro.
 

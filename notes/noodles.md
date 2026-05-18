@@ -1,6 +1,7 @@
 ---
 title: "Pates asiatiques trop faciles"
 layout: article
+description: "Recette de pâtes asiatiques ultra rapides à la taiwanaise : huile de sésame, sauce soja et ail."
 date: "2022-04-21"
 ---
 

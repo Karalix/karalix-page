@@ -1,6 +1,7 @@
 ---
 title: "Bibliothèque partagée"
 layout: page
+description: "La bibliothèque partagée d'Alix Ducros : pile à lire, podcasts et liens recommandés."
 ---
 
 Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.

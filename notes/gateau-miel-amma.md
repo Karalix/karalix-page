@@ -1,6 +1,7 @@
 ---
 title: "Le gâteau au miel de Amma"
 layout: article
+description: "La recette traditionnelle du gâteau au miel de Amma, expliquée étape par étape."
 date: "2026-02-17"
 ---
 

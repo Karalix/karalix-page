@@ -1,6 +1,7 @@
 ---
 title: "Configurer Mistral comme moteur de recherche par défaut sur Firefox"
 layout: article
+description: "Configurer Mistral (Le Chat) comme moteur de recherche par défaut dans Firefox via un descripteur OpenSearch."
 date: "2025-02-07"
 head:
  - - link

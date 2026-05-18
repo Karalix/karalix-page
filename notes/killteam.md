@@ -1,6 +1,7 @@
 ---
 title: "Segmentum Bagarrus"
 layout: article
+description: "Le Segmentum Bagarrus : règles abrégées en français de Kill Team et Warhammer 40k, et campagne entre amis."
 date: "2023-11-27"
 hero: "/hero-bagarrus.jpg"
 ---

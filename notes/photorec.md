@@ -1,6 +1,7 @@
 ---
 title: "Récupération de fichiers perdus"
 layout: article
+description: "Récupérer des fichiers supprimés ou perdus gratuitement avec PhotoRec, un logiciel open source simple."
 date: "2024-04-06"
 ---
 
