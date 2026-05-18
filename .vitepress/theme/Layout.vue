@@ -63,6 +63,16 @@ body {
 a {
     cursor: none;
 }
+
+@keyframes malt-logo-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.group:hover .malt-logo {
+    animation: malt-logo-spin 4s linear infinite;
+}
 </style>
 
 <template>
@@ -152,7 +162,7 @@ a {
                 </a>
                 <a href="https://hormur.com" class="row-span-1">
                     <div
-                        class="card hover:shadow-xl transition-all group bg-[#f9ded7] hover:bg-white"
+                        class="card h-[120px] hover:shadow-xl transition-all group bg-[#f9ded7] hover:bg-white"
                     >
                         <div class="card-body">
                             <svg
@@ -197,9 +207,33 @@ a {
                         </div>
                     </div>
                 </a>
+                <a
+                    href="https://www.malt.fr/profile/alixducros"
+                    class="row-span-1 group relative block"
+                >
+                    <span
+                        class="absolute inset-x-0 top-0 z-0 text-center text-xs font-bold text-[#FC5656] translate-y-0 group-hover:-translate-y-4 transition-transform duration-300 pointer-events-none"
+                    >
+                        Embauchez-moi !
+                    </span>
+                    <div
+                        class="card h-[120px] relative z-10 hover:shadow-xl transition-all group bg-[#ffe0e0] hover:bg-white"
+                    >
+                        <div
+                            class="card-body flex flex-row items-center gap-4"
+                        >
+                            <img
+                                src="/icons/malt.svg"
+                                alt="Logo Malt"
+                                class="h-12 w-12 shrink-0 malt-logo"
+                            />
+                            <h2 class="card-title">Freelance</h2>
+                        </div>
+                    </div>
+                </a>
                 <a href="https://www.kronikle.eu" class="row-span-1">
                     <div
-                        class="card hover:shadow-xl transition-all group overflow-clip border border-gray-100 hover:border-gray-200"
+                        class="card h-[120px] hover:shadow-xl transition-all group overflow-clip border border-gray-100 hover:border-gray-200"
                     >
                         <div class="card-body">
                             <img
@@ -337,7 +371,13 @@ a {
                     />
                     <div class="text-sm">
                         Écrit par <a href="/">Alix Ducros</a> le {{ frontmatter.date }}<br />
-                        Développement Web, recherche UX, design ludique ou cuisine, n'hésitez pas à me contacter pour discuter de vos projets ou de vos idées.
+                        Développement Web, recherche UX, design ludique ou cuisine, n'hésitez pas à me contacter pour discuter de vos projets ou de vos idées.<br />
+                        Et si le cœur vous en dit, vous pouvez aussi
+                        <a
+                            href="https://www.malt.fr/profile/alixducros"
+                            class="font-bold text-[#FC5656]"
+                            >m'embaucher en freelance sur Malt</a
+                        >.
                     </div>
                 </div>
             </div>
