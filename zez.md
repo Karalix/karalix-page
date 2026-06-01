@@ -3,6 +3,9 @@ title: "Baptême du Zez"
 layout: page
 ---
 
+# Baptême de Zelio
+*06/06/2026*
+
 ## Extrait de la [dernière lettre de Baden-Powell](https://fr.scoutwiki.org/Dernier_message_de_Baden-Powell)
 
 J’ai eu une vie très heureuse et je voudrais qu’on puisse en dire autant de chacun de vous.
