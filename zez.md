@@ -1,10 +1,14 @@
 ---
 title: "Baptême du Zez"
 layout: page
+noindex: true
 ---
 
 # Baptême de Zelio
 *06/06/2026*
+
+## Per crucem
+![Partition complète](https://s7c4ce17a9243ce2b.jimcontent.com/download/version/1331501278/module/5644282010/name/Per-crucem.pdf)
 
 ## Extrait de la [dernière lettre de Baden-Powell](https://fr.scoutwiki.org/Dernier_message_de_Baden-Powell)
 

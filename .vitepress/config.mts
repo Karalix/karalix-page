@@ -6,13 +6,20 @@ const siteTitle = 'Alix Ducros'
 const siteDescription =
   "I am Alix Ducros, aka krlx. Founder of Kronikle and lead developer at Hormur. Find here a few notes and links to my proudest accomplishments."
 
+// Slugs des pages exclues de l'index (frontmatter `noindex: true`),
+// remplis au rendu des pages et filtrés du sitemap pour rester cohérent.
+const noindexSlugs = new Set<string>()
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'fr-FR',
   title: siteTitle,
   description: siteDescription,
   sitemap: {
-    hostname
+    hostname,
+    transformItems(items) {
+      return items.filter((item) => !noindexSlugs.has(item.url.replace(/^\//, '')))
+    }
   },
   cleanUrls: true,
   srcExclude: ['claude.md', 'CLAUDE.md', 'README.md', 'readme.md'],
@@ -46,6 +53,12 @@ export default defineConfig({
       : `${hostname}/profil.jpg`
 
     pageData.frontmatter.head ??= []
+
+    // Pages perso / brouillons : hors index Google (et hors sitemap via noindexSlugs)
+    if (pageData.frontmatter.noindex === true) {
+      noindexSlugs.add(slug)
+      pageData.frontmatter.head.push(['meta', { name: 'robots', content: 'noindex, follow' }])
+    }
 
     pageData.frontmatter.head.push(
       ['link', { rel: 'canonical', href: canonical }],
