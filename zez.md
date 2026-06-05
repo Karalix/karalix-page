@@ -80,6 +80,14 @@ Hanjun, Carole,
 Fleurs de la tendresse...
 
 **5**  
+Raphaël, Marianne   
+Nathan et Manon,  
+Marie, Jeanne, Eugène et puis Marc;  
+Thymëo, Axel,  
+Lucien et Aurèle  
+Peuple de lumière…
+
+**6**  
 Saints de nos familles,  
 Saints de tous les peuples,  
 Germes d'un monde plus humain ;  
