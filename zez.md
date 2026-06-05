@@ -64,30 +64,22 @@ Marie-Madeleine,
 Témoins et martyrs…
 
 **3**  
-Grégoire, Augustin,  
-Basile, Athanase,  
-Pères d’Orient et d’Occident ;  
-Martin et Benoît,  
-François, Dominique,  
-Gens de la prière…
+Zelio et Zola,  
+Magali, Alix,  
+Complicité d'un doux foyer ;  
+Cyprien, Sibylle,  
+Aline et Rémi,  
+Amitié fidèle…
 
 **4**  
-Bernard et Bruno,  
-Thérèse et Xavier,  
-Fondateurs d'ordres et de missions ;  
-Antoine et Damien,  
-Thomas, Catherine,  
-Scruteurs de mystère…
+Josette et Raymond,  
+Lucie, Nicolas,  
+Moment de rire et de sagesse;  
+Alain et Jean-Marc,  
+Hanjun, Carole,  
+Fleurs de la tendresse...
 
 **5**  
-Cécile et Agnès,  
-Agathe et Lucie,  
-Félicité et Perpétue ;  
-Jeanne et Geneviève,  
-Claire et Bernadette,  
-Fleurs de la tendresse…
-
-**6**  
 Saints de nos familles,  
 Saints de tous les peuples,  
 Germes d'un monde plus humain ;  
