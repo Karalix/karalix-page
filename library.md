@@ -14,7 +14,7 @@ Un mot de passe vous est demandé ? C'est `Vivelebrocoli`.
 
 Récit en deux parties de mon ami Victorin, parti à Calais pour aider les migrants, qui témoigne des traitements inhumains qui leur sont infligés.
 
-- [Lettres calaisiennes — Première partie](/Lettres%20calaisiennes%20-%20Premi%C3%A8re%20partie.pdf)
+- [Lettres calaisiennes — Première partie](/Lettres%20calaisiennes%20-%20Premi%C3%A8re%20partie.pdf) ([epub](/Lettres%20calaisiennes%20-%20Premi%C3%A8re%20partie.epub))
 - [Lettres calaisiennes — Deuxième partie](/Lettres%20calaisiennes%20-%20Deuxi%C3%A8me%20partie.pdf) ([epub](/Lettres%20calaisiennes%20-%20Deuxi%C3%A8me%20partie.epub))
 
 ## Epub
