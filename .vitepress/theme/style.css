@@ -6,3 +6,76 @@ html {
   font-family: Arial, Helvetica;
 }
 
+/* Lettres Calaisiennes — typographie livre */
+.lettres-calaisiennes {
+  font-family: "Georgia", "Times New Roman", serif;
+  line-height: 1.8;
+  text-align: justify;
+  hyphens: auto;
+}
+.lettres-calaisiennes h1 {
+  font-size: 1.6em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.3;
+  margin: 2.5em 0 1.5em 0;
+  border-top: none;
+}
+.lettres-calaisiennes h1::after {
+  content: "";
+  display: block;
+  width: 4em;
+  border-bottom: 1px solid #444;
+  margin: 0.8em auto 0 auto;
+}
+.lettres-calaisiennes h2 {
+  font-size: 1.15em;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+  margin: 2em 0 1.2em 0;
+  border-top: none;
+}
+.lettres-calaisiennes h3 {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 1.6em 0 0.8em 0;
+}
+.lettres-calaisiennes p {
+  margin: 0 0 0.8em 0;
+  text-indent: 1.3em;
+}
+.lettres-calaisiennes h1 + p,
+.lettres-calaisiennes h2 + p,
+.lettres-calaisiennes h3 + p,
+.lettres-calaisiennes figure + p {
+  text-indent: 0;
+}
+.lettres-calaisiennes figure {
+  margin: 2em 0;
+  text-align: center;
+}
+.lettres-calaisiennes figure img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+.lettres-calaisiennes figcaption {
+  font-size: 0.85em;
+  font-style: italic;
+  color: #666;
+  text-align: center;
+  margin-top: 0.6em;
+  text-indent: 0;
+}
+.lettres-calaisiennes blockquote {
+  margin: 1em 2em;
+  font-style: italic;
+}
+.lettres-calaisiennes blockquote p {
+  text-indent: 0;
+}
+.lettres-calaisiennes a {
+  color: inherit;
+  text-decoration: underline;
+}
+
