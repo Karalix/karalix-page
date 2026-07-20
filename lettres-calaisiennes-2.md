@@ -6,6 +6,8 @@ description: "Récit de Victorin, parti à Calais pour aider les migrants — De
 
 # Lettres Calaisiennes — Deuxième partie
 
+**par Victorin Barthez**
+
 <div class="lettres-calaisiennes prose-lg max-w-none">
 
 <section id="lettres-calaisiennes" class="level1 unnumbered">
