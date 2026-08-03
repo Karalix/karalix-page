@@ -592,6 +592,28 @@ const resumeAvailable = computed(() => lastBook.value !== null)
   color: var(--reader-fg);
   font-family: Arial, Helvetica, sans-serif;
 }
+.reader-app.theme-light {
+  --reader-bg: #f7f8fa;
+  --reader-fg: #1a1a1a;
+  --reader-border: rgba(0, 0, 0, 0.1);
+  --reader-muted: rgba(0, 0, 0, 0.55);
+  --reader-panel: #ffffff;
+  --reader-hover: rgba(0, 0, 0, 0.06);
+  /* DaisyUI utilise ses propres variables pour card/btn/range — on les
+     verrouille sur le thème clair pour ne pas hériter du dark via
+     prefers-color-scheme (OS sombre). */
+  color-scheme: light;
+  --b1: 100% 0 0;
+  --b2: 96.1151% 0 0;
+  --b3: 92.4169% 0.00108 197.137559;
+  --bc: 27.8078% 0.029596 256.847952;
+  --p: 49.12% 0.3096 275.75;
+  --pc: 89.824% 0.06192 275.75;
+  --n: 32.1785% 0.02476 255.701624;
+  --nc: 89.4994% 0.011585 252.096176;
+  --er: 71.76% 0.221 22.18;
+  --erc: 0% 0 0;
+}
 .reader-app.theme-dark {
   --reader-bg: #111111;
   --reader-fg: #e5e5e5;
@@ -599,6 +621,17 @@ const resumeAvailable = computed(() => lastBook.value !== null)
   --reader-muted: rgba(255, 255, 255, 0.55);
   --reader-panel: #1c1c1c;
   --reader-hover: rgba(255, 255, 255, 0.08);
+  color-scheme: dark;
+  --b1: 25.3267% 0.015896 252.417568;
+  --b2: 23.2607% 0.013807 253.100675;
+  --b3: 21.1484% 0.01165 254.087939;
+  --bc: 74.6477% 0.0216 264.435964;
+  --p: 65.69% 0.196 275.75;
+  --pc: 13.138% 0.0392 275.75;
+  --n: 31.3815% 0.021108 254.139175;
+  --nc: 74.6477% 0.0216 264.435964;
+  --er: 71.76% 0.221 22.18;
+  --erc: 0% 0 0;
 }
 .reader-app.theme-sepia {
   --reader-bg: #f4ecd8;
@@ -607,6 +640,17 @@ const resumeAvailable = computed(() => lastBook.value !== null)
   --reader-muted: rgba(67, 52, 34, 0.6);
   --reader-panel: #fdf8ec;
   --reader-hover: rgba(67, 52, 34, 0.08);
+  color-scheme: light;
+  --b1: 98.5% 0.015 90;
+  --b2: 95% 0.03 90;
+  --b3: 91% 0.04 90;
+  --bc: 32% 0.045 60;
+  --p: 40% 0.07 55;
+  --pc: 95% 0.02 90;
+  --n: 32% 0.045 60;
+  --nc: 93% 0.02 85;
+  --er: 71.76% 0.221 22.18;
+  --erc: 0% 0 0;
 }
 
 /* ---------- Bibliothèque ---------- */
