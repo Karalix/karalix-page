@@ -19,6 +19,8 @@ Récit en deux parties de mon ami Victorin, parti à Calais pour aider les migra
 
 ## Epub
 
+📚 Ces epub sont aussi lisibles directement dans le [lecteur intégré](/reader) (et installables hors-ligne).
+
 [Dossier Proton](https://drive.proton.me/urls/HVD02GVTVR#RN1gy6yDMbaQ)
 
 - Cycle d'Ender

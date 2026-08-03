@@ -28,6 +28,8 @@ export default defineConfig({
     ['link', { rel: 'alternate', type: 'application/rss+xml', title: 'RSS Feed', href: '/feed.xml' }],
     ['link', { rel: 'alternate', type: 'application/atom+xml', title: 'Atom Feed', href: '/feed.atom' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
+    ['link', { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon.png' }],
     ['meta', { name: 'author', content: siteTitle }],
     ['meta', { name: 'theme-color', content: '#1a1a1a' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
