@@ -341,6 +341,10 @@ a {
                 </div>
             </div>
         </div>
+        <div v-else-if="frontmatter.layout === false">
+            <!-- Pages sans layout (ex. /reader) : rendu brut, plein écran -->
+            <Content />
+        </div>
         <div v-else>
             <a class="btn cursor-none fixed left-8 bottom-8 sm:top-8 z-20" href="/">Retour à l'accueil</a>
         </div>
