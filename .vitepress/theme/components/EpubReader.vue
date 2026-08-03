@@ -22,6 +22,7 @@ const isSeeking = ref(false)
 
 // ---------- Préférences ----------
 type ThemeName = 'light' | 'sepia' | 'dark'
+type FlowName = 'scrolled' | 'paginated'
 
 const THEMES: Record<ThemeName, { bg: string; text: string; label: string }> = {
   light: { bg: '#ffffff', text: '#1a1a1a', label: 'Clair' },
@@ -31,8 +32,11 @@ const THEMES: Record<ThemeName, { bg: string; text: string; label: string }> = {
 
 const prefs = reactive({
   fontSize: 100, // %
-  theme: 'light' as ThemeName
+  theme: 'light' as ThemeName,
+  flow: 'scrolled' as FlowName
 })
+
+const isScrolled = computed(() => prefs.flow === 'scrolled')
 
 // ---------- Persistance (localStorage, client only) ----------
 const LS_LAST = 'krlx-reader:last'
@@ -50,13 +54,14 @@ function loadPrefs (): void {
       const p = JSON.parse(raw)
       if (typeof p.fontSize === 'number') prefs.fontSize = p.fontSize
       if (p.theme && p.theme in THEMES) prefs.theme = p.theme
+      if (p.flow === 'scrolled' || p.flow === 'paginated') prefs.flow = p.flow
     }
   } catch { /* ignore */ }
 }
 
 function savePrefs (): void {
   try {
-    localStorage.setItem(LS_PREFS, JSON.stringify({ fontSize: prefs.fontSize, theme: prefs.theme }))
+    localStorage.setItem(LS_PREFS, JSON.stringify({ fontSize: prefs.fontSize, theme: prefs.theme, flow: prefs.flow }))
   } catch { /* ignore */ }
 }
 
@@ -74,6 +79,20 @@ function saveLast (bookKey: string, cfi: string): void {
   try {
     localStorage.setItem(LS_LAST, JSON.stringify({ bookKey, cfi }))
   } catch { /* ignore */ }
+}
+
+// Le scroll émet beaucoup de relocated : on n'écrit localStorage qu'une fois par seconde
+// tout en gardant toujours le tout dernier cfi.
+let lastSavedCfi = ''
+let saveTimer: ReturnType<typeof setTimeout> | undefined
+
+function throttledSaveLast (bookKey: string, cfi: string): void {
+  lastSavedCfi = cfi
+  if (saveTimer) return
+  saveTimer = setTimeout(() => {
+    saveTimer = undefined
+    if (lastSavedCfi) saveLast(bookKey, lastSavedCfi)
+  }, 1000)
 }
 
 // ---------- Résolution du dernier livre (uniquement parmi ceux déclarés) ----------
@@ -112,6 +131,77 @@ async function openUploadedFile (file: File): Promise<void> {
   }
 }
 
+// Met à jour le slider + la sauvegarde à partir de la position courante réelle.
+// Nécessaire en scrolled : `display(cfi)` ne déclenche pas toujours `relocated`,
+// sinon le slider resterait à 0 à la reprise malgré la bonne page affichée.
+function syncProgress (r: Rendition): void {
+  try {
+    const loc = r.currentLocation()
+    if (loc && loc.start && loc.start.cfi) {
+      const pct = r.book.locations.percentageFromCfi(loc.start.cfi)
+      if (typeof pct === 'number' && !Number.isNaN(pct)) {
+        progress.value = Math.round(pct * 100)
+      }
+      throttledSaveLast(currentBookKey.value, loc.start.cfi)
+    }
+  } catch { /* ignore */ }
+}
+
+// Crée (ou recrée) la rendition selon le flow choisi, en reprenant au cfi donné.
+async function createRendition (cfi?: string): Promise<void> {
+  if (!book.value || !viewerEl.value) return
+  try {
+    if (rendition.value) rendition.value.destroy()
+  } catch { /* ignore */ }
+  rendition.value = null
+
+  const r = book.value.renderTo(viewerEl.value, {
+    width: '100%',
+    height: '100%',
+    manager: prefs.flow === 'scrolled' ? 'continuous' : 'default',
+    flow: prefs.flow === 'scrolled' ? 'scrolled' : 'paginated',
+    spread: prefs.flow === 'scrolled' ? undefined : 'auto',
+    minSpreadWidth: prefs.flow === 'scrolled' ? undefined : 800,
+    allowScriptedContent: false
+  })
+  rendition.value = r
+  applyTheme(r)
+
+  // Locations (nécessaire au slider de progression)
+  r.book.locations.generate(1024).then(() => {
+    locationsReady.value = true
+    syncProgress(r)
+  }).catch(() => { locationsReady.value = false })
+
+  // En scrolled, `relocated` est émis pendant le scroll (debounce 30ms) via
+  // reportLocation ; en paginated à chaque changement de page.
+  r.on('relocated', (loc: { start: { cfi: string } }) => {
+    const pct = r.book.locations.percentageFromCfi(loc.start.cfi)
+    if (typeof pct === 'number' && !Number.isNaN(pct)) {
+      progress.value = Math.round(pct * 100)
+    }
+    throttledSaveLast(currentBookKey.value, loc.start.cfi)
+  })
+
+  await r.display(cfi || undefined)
+
+  // Amorçage du flux scrollé : sans dépassement initial (1re section plus courte
+  // que l'écran), la molette ne peut pas scroller et le lookahead ne se déclenche
+  // jamais. fill() précharge les sections voisines → le conteneur dépasse
+  // immédiatement et le scroll vertical natif fonctionne.
+  if (prefs.flow === 'scrolled') {
+    try {
+      if (r.manager && typeof r.manager.fill === 'function') {
+        await r.manager.fill()
+      }
+    } catch { /* non bloquant */ }
+  }
+
+  // Synchronise slider + position sauvegardée dès l'affichage initial
+  // (le relocated seul ne suffit pas en scrolled).
+  syncProgress(r)
+}
+
 async function loadBook (b: EpubBook, fallbackTitle: string, cfi?: string): Promise<void> {
   isLoading.value = true
   loadError.value = null
@@ -129,31 +219,7 @@ async function loadBook (b: EpubBook, fallbackTitle: string, cfi?: string): Prom
 
     if (!viewerEl.value) throw new Error('Conteneur de lecture introuvable')
 
-    const r = b.renderTo(viewerEl.value, {
-      width: '100%',
-      height: '100%',
-      flow: 'paginated',
-      spread: 'auto',
-      minSpreadWidth: 800,
-      allowScriptedContent: false
-    })
-    rendition.value = r
-    applyTheme(r)
-
-    // Locations (nécessaire au slider de progression)
-    r.book.locations.generate(1024).then(() => {
-      locationsReady.value = true
-    }).catch(() => { locationsReady.value = false })
-
-    r.on('relocated', (loc: { start: { cfi: string } }) => {
-      const pct = r.book.locations.percentageFromCfi(loc.start.cfi)
-      if (typeof pct === 'number' && !Number.isNaN(pct)) {
-        progress.value = Math.round(pct * 100)
-      }
-      saveLast(currentBookKey.value, loc.start.cfi)
-    })
-
-    await r.display(cfi || undefined)
+    await createRendition(cfi)
   } catch (e) {
     loadError.value = (e as Error).message || String(e)
     closeBook(false)
@@ -197,6 +263,7 @@ async function onSeekChange (): Promise<void> {
   const cfi = rendition.value.book.locations.cfiFromPercentage(progress.value / 100)
   if (cfi) {
     await rendition.value.display(cfi)
+    syncProgress(rendition.value)
   }
   isSeeking.value = false
 }
@@ -221,6 +288,24 @@ function setTheme (name: ThemeName): void {
   savePrefs()
 }
 
+async function setFlow (flow: FlowName): Promise<void> {
+  if (prefs.flow === flow || !book.value) return
+  // on garde la position courante avant de recréer la rendition
+  let currentCfi: string | undefined
+  try {
+    const loc = rendition.value?.currentLocation?.()
+    currentCfi = loc?.start?.cfi
+  } catch { /* ignore */ }
+  prefs.flow = flow
+  savePrefs()
+  isLoading.value = true
+  try {
+    await createRendition(currentCfi)
+  } finally {
+    isLoading.value = false
+  }
+}
+
 function handleUpload (e: Event): void {
   const input = e.target as HTMLInputElement
   const file = input.files?.[0]
@@ -231,12 +316,39 @@ function handleUpload (e: Event): void {
 }
 
 // ---------- Clavier ----------
+function getScroller (): HTMLElement | null {
+  if (!viewerEl.value) return null
+  return viewerEl.value.querySelector('.epub-container') as HTMLElement | null
+}
+
 function onKeydown (e: KeyboardEvent): void {
   if (!rendition.value || showToc.value) return
   const tag = (e.target as HTMLElement)?.tagName
   if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return
+
+  if (prefs.flow === 'paginated') {
+    // Paginé : droite/PageDn/Espace = page suivante, gauche/PageUp = précédente
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+      e.preventDefault(); next()
+    } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+      e.preventDefault(); prev()
+    }
+    return
+  }
+
+  // Scrolled : gauche/droite = défilement d'un écran
   if (e.key === 'ArrowRight') { e.preventDefault(); next() }
   else if (e.key === 'ArrowLeft') { e.preventDefault(); prev() }
+  // Haut/bas, espace, PgUp/PgDn : scroll vertical natif du conteneur
+  else if (['ArrowUp', 'ArrowDown', ' ', 'PageUp', 'PageDown'].includes(e.key)) {
+    const scroller = getScroller()
+    if (scroller) {
+      e.preventDefault()
+      const step = e.key === 'ArrowUp' || e.key === 'PageUp' ? -1 : 1
+      const amount = e.key === 'ArrowUp' || e.key === 'ArrowDown' ? 80 : scroller.clientHeight * 0.9
+      scroller.scrollBy({ top: step * amount, behavior: 'smooth' })
+    }
+  }
 }
 
 function onResize (): void {
@@ -274,7 +386,7 @@ const resumeAvailable = computed(() => lastBook.value !== null)
 </script>
 
 <template>
-  <div class="reader-app">
+  <div class="reader-app" :class="`theme-${prefs.theme}`">
     <!-- ============ Écran bibliothèque ============ -->
     <div v-if="!book" class="library-screen">
       <div class="library-inner">
@@ -335,20 +447,24 @@ const resumeAvailable = computed(() => lastBook.value !== null)
     <!-- ============ Lecteur ============ -->
     <div v-else class="reader-screen">
       <header class="reader-header">
-        <button class="btn btn-ghost btn-sm" title="Retour à la bibliothèque" @click="closeBook(true)">
+        <button class="btn btn-ghost btn-sm reader-icon-btn" title="Retour à la bibliothèque" @click="closeBook(true)">
           ←
         </button>
         <span class="reader-title">{{ currentTitle }}</span>
         <div class="flex items-center gap-1">
-          <button class="btn btn-ghost btn-sm" title="Sommaire" @click="showToc = !showToc">☰</button>
-          <button class="btn btn-ghost btn-sm" title="Réglages" @click="showSettings = !showSettings">⚙</button>
+          <button class="btn btn-ghost btn-sm reader-icon-btn" title="Sommaire" @click="showToc = !showToc">☰</button>
+          <button class="btn btn-ghost btn-sm reader-icon-btn" title="Réglages" @click="showSettings = !showSettings">⚙</button>
         </div>
       </header>
 
       <div ref="viewerEl" class="reader-viewer" :class="`theme-${prefs.theme}`"></div>
 
       <footer class="reader-footer">
-        <button class="btn btn-circle btn-sm" title="Page précédente" @click="prev">‹</button>
+        <button
+          class="btn btn-circle btn-sm reader-icon-btn"
+          :title="isScrolled ? 'Défiler vers le haut' : 'Page précédente'"
+          @click="prev"
+        >‹</button>
         <div class="flex-1 flex items-center gap-2">
           <input
             type="range"
@@ -362,7 +478,11 @@ const resumeAvailable = computed(() => lastBook.value !== null)
           />
           <span class="text-xs w-9 text-right">{{ progress }}%</span>
         </div>
-        <button class="btn btn-circle btn-sm" title="Page suivante" @click="next">›</button>
+        <button
+          class="btn btn-circle btn-sm reader-icon-btn"
+          :title="isScrolled ? 'Défiler vers le bas' : 'Page suivante'"
+          @click="next"
+        >›</button>
       </footer>
 
       <!-- Overlay sommaire -->
@@ -370,7 +490,7 @@ const resumeAvailable = computed(() => lastBook.value !== null)
         <div class="panel">
           <div class="panel-head">
             <span class="font-semibold">Sommaire</span>
-            <button class="btn btn-ghost btn-xs" @click="showToc = false">✕</button>
+            <button class="btn btn-ghost btn-xs reader-icon-btn" @click="showToc = false">✕</button>
           </div>
           <ul class="toc-list">
             <li v-for="item in toc" :key="item.href">
@@ -390,7 +510,7 @@ const resumeAvailable = computed(() => lastBook.value !== null)
         <div class="panel">
           <div class="panel-head">
             <span class="font-semibold">Réglages</span>
-            <button class="btn btn-ghost btn-xs" @click="showSettings = false">✕</button>
+            <button class="btn btn-ghost btn-xs reader-icon-btn" @click="showSettings = false">✕</button>
           </div>
           <div class="settings-body">
             <div class="mb-4">
@@ -411,7 +531,7 @@ const resumeAvailable = computed(() => lastBook.value !== null)
                 <button class="btn btn-outline btn-xs" @click="setFontSize(10)">A+</button>
               </div>
             </div>
-            <div>
+            <div class="mb-4">
               <span class="text-sm block mb-1">Thème</span>
               <div class="flex gap-2">
                 <button
@@ -422,6 +542,25 @@ const resumeAvailable = computed(() => lastBook.value !== null)
                   @click="setTheme(name as ThemeName)"
                 >
                   {{ t.label }}
+                </button>
+              </div>
+            </div>
+            <div>
+              <span class="text-sm block mb-1">Défilement</span>
+              <div class="flex gap-2">
+                <button
+                  class="btn btn-sm flex-1"
+                  :class="prefs.flow === 'scrolled' ? 'btn-primary' : 'btn-outline'"
+                  @click="setFlow('scrolled')"
+                >
+                  Continu
+                </button>
+                <button
+                  class="btn btn-sm flex-1"
+                  :class="prefs.flow === 'paginated' ? 'btn-primary' : 'btn-outline'"
+                  @click="setFlow('paginated')"
+                >
+                  Paginé
                 </button>
               </div>
             </div>
@@ -439,15 +578,41 @@ const resumeAvailable = computed(() => lastBook.value !== null)
 </template>
 
 <style scoped>
+/* ---------- Variables de thème (header, footer, panneaux, bibliothèque) ---------- */
 .reader-app {
+  --reader-bg: #f7f8fa;
+  --reader-fg: #1a1a1a;
+  --reader-border: rgba(0, 0, 0, 0.1);
+  --reader-muted: rgba(0, 0, 0, 0.55);
+  --reader-panel: #ffffff;
+  --reader-hover: rgba(0, 0, 0, 0.06);
   height: 100vh;
-  background: #f7f8fa;
+  height: 100dvh;
+  background: var(--reader-bg);
+  color: var(--reader-fg);
   font-family: Arial, Helvetica, sans-serif;
+}
+.reader-app.theme-dark {
+  --reader-bg: #111111;
+  --reader-fg: #e5e5e5;
+  --reader-border: rgba(255, 255, 255, 0.14);
+  --reader-muted: rgba(255, 255, 255, 0.55);
+  --reader-panel: #1c1c1c;
+  --reader-hover: rgba(255, 255, 255, 0.08);
+}
+.reader-app.theme-sepia {
+  --reader-bg: #f4ecd8;
+  --reader-fg: #433422;
+  --reader-border: rgba(67, 52, 34, 0.15);
+  --reader-muted: rgba(67, 52, 34, 0.6);
+  --reader-panel: #fdf8ec;
+  --reader-hover: rgba(67, 52, 34, 0.08);
 }
 
 /* ---------- Bibliothèque ---------- */
 .library-screen {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   padding: 3rem 1.5rem;
@@ -476,7 +641,7 @@ const resumeAvailable = computed(() => lastBook.value !== null)
   justify-content: space-between;
   gap: 1rem;
   padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid var(--reader-border);
 }
 .book-title {
   font-weight: 500;
@@ -485,6 +650,7 @@ const resumeAvailable = computed(() => lastBook.value !== null)
 /* ---------- Lecteur ---------- */
 .reader-screen {
   height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
 }
@@ -493,8 +659,9 @@ const resumeAvailable = computed(() => lastBook.value !== null)
   align-items: center;
   gap: 0.75rem;
   padding: 0.5rem 0.75rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  background: #f7f8fa;
+  border-bottom: 1px solid var(--reader-border);
+  background: var(--reader-bg);
+  color: var(--reader-fg);
 }
 .reader-title {
   flex: 1;
@@ -502,6 +669,13 @@ const resumeAvailable = computed(() => lastBook.value !== null)
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.reader-icon-btn {
+  color: var(--reader-fg);
+  border-color: var(--reader-border);
+}
+.reader-icon-btn:hover {
+  background: var(--reader-hover);
 }
 .reader-viewer {
   flex: 1;
@@ -513,14 +687,15 @@ const resumeAvailable = computed(() => lastBook.value !== null)
   align-items: center;
   gap: 0.75rem;
   padding: 0.5rem 0.75rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  background: #f7f8fa;
+  border-top: 1px solid var(--reader-border);
+  background: var(--reader-bg);
+  color: var(--reader-fg);
 }
 
-/* Thèmes appliqués au conteneur (l'iframe est gérée par epubjs) */
-.theme-light { background: #ffffff; }
-.theme-sepia { background: #f4ecd8; }
-.theme-dark { background: #1a1a1a; }
+/* Thèmes appliqués au conteneur de rendu (l'iframe est gérée par epubjs) */
+.reader-viewer.theme-light { background: #ffffff; }
+.reader-viewer.theme-sepia { background: #f4ecd8; }
+.reader-viewer.theme-dark { background: #1a1a1a; }
 
 /* ---------- Overlays ---------- */
 .overlay {
@@ -533,7 +708,8 @@ const resumeAvailable = computed(() => lastBook.value !== null)
   align-items: stretch;
 }
 .panel {
-  background: #f7f8fa;
+  background: var(--reader-panel);
+  color: var(--reader-fg);
   width: 100%;
   max-width: 24rem;
   display: flex;
@@ -545,7 +721,7 @@ const resumeAvailable = computed(() => lastBook.value !== null)
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--reader-border);
 }
 .toc-list {
   list-style: none;
@@ -560,9 +736,10 @@ const resumeAvailable = computed(() => lastBook.value !== null)
   padding: 0.5rem 0.75rem;
   border-radius: 0.375rem;
   font-size: 0.9rem;
+  color: var(--reader-fg);
 }
 .toc-link:hover {
-  background: rgba(0, 0, 0, 0.06);
+  background: var(--reader-hover);
 }
 .toc-sublist {
   list-style: none;
@@ -571,6 +748,7 @@ const resumeAvailable = computed(() => lastBook.value !== null)
 .settings-body {
   padding: 1rem;
   overflow-y: auto;
+  color: var(--reader-fg);
 }
 .loading-overlay {
   position: fixed;
@@ -581,6 +759,10 @@ const resumeAvailable = computed(() => lastBook.value !== null)
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: var(--reader-fg);
+}
+.theme-dark .loading-overlay {
+  background: rgba(17, 17, 17, 0.9);
 }
 </style>
 
