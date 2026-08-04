@@ -373,6 +373,15 @@ onMounted(() => {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js').catch(() => { /* SW optionnel */ })
   }
+  // Deep-link : /reader?book=<id|index|titre> ouvre directement le livre
+  const params = new URLSearchParams(window.location.search)
+  const bookParam = params.get('book')
+  if (bookParam) {
+    const found = READER_BOOKS.find(
+      (b, i) => b.id === bookParam || b.title === bookParam || String(i) === bookParam
+    )
+    if (found) void openBookByUrl(found)
+  }
 })
 
 onBeforeUnmount(() => {
