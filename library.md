@@ -96,9 +96,12 @@ Récit en deux parties de mon ami Victorin, parti à Calais pour aider les migra
 📗 | The Will of the Many ⭐⭐
 📗 | L'heure des prédateurs ⭐
 📗 | Comment vaincre un Roi Démon en 10 étapes ⭐ 
-📗 | Les annales de la compagnie noire 1, 2, 3, 4, 5 ⭐⭐
+📗 | Les annales de la compagnie noire 1, 2, 3, 4, 5, 6 ⭐⭐
+📗 | Les Trésors de la mer Rouge ⭐
+📗 | Lightfall 1 ⭐
+📗 | Cats & Dragons ⭐
 📕 | Sainte Célestine 😐
-📖 | Les annales de la compagnie noire 6
+📖 | Les annales de la compagnie noire 7
 📖 | Le mage du Kremlin
 📕 | Capitale du Nord 3
 📕 | Les Mondes d'Aria : Le serment des Runes
