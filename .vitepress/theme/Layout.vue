@@ -7,6 +7,11 @@ import { gsap } from "gsap";
 const fiveLastNotes = notes.slice(0, 4);
 const email = ref("alix");
 const signalLink = ref("https://signal.me/#eu/");
+const friendsLinks = [
+    { title: "Le blog de Bob", url: "https://bobdurkheim.writizzy.blog/" },
+    { title: "Eventually Coding", url: "https://eventuallycoding.com/" },
+    { title: "Cepcam", url: "https://blog.cepcam.fr" },
+];
 
 function animateCursor () {
     const cursor = document.querySelector('.cursor');
@@ -337,6 +342,26 @@ a {
                             class="group-hover:translate-x-4 transition-all hover:font-bold"
                             >Signal</a
                         >
+                    </div>
+                </div>
+                <div
+                    class="card hover:shadow-xl transition-all group hover:bg-gray-50"
+                >
+                    <div class="card-body">
+                        <h2 class="card-title">Morceaux choisis d'internet</h2>
+                        <div
+                            class="prose group-hover:translate-x-4 transition-all"
+                        >
+                            <ul>
+                                <li v-for="link of friendsLinks" :key="link.url">
+                                    <a
+                                        :href="link.url"
+                                        class="no-underline hover:font-bold"
+                                        >{{ link.title }}</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
