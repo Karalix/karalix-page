@@ -304,12 +304,16 @@ a {
                         </a>
                     </div>
                 </div>
-                <a href="/notes" class="sm:row-span-2 sm:col-span-2">
+                <!-- Pas de <a> englobant : des liens imbriqués dans un lien sont
+                     invalides en HTML et cassent l'hydratation des cards suivantes -->
+                <div class="sm:row-span-2 sm:col-span-2">
                     <div
-                        class="card hover:shadow-xl transition-all group hover:bg-gray-50"
+                        class="card hover:shadow-xl transition-all group hover:bg-gray-50 h-full"
                     >
                         <div class="card-body">
-                            <h2 class="card-title">Notes</h2>
+                            <a href="/notes" class="hover:font-bold">
+                                <h2 class="card-title">Notes</h2>
+                            </a>
                             <div
                                 class="prose group-hover:translate-x-4 transition-all"
                             >
@@ -321,12 +325,18 @@ a {
                                             >{{ note.title }}</a
                                         >
                                     </li>
-                                    <li>...</li>
+                                    <li>
+                                        <a
+                                            href="/notes"
+                                            class="no-underline hover:font-bold"
+                                            >...</a
+                                        >
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                </a>
+                </div>
                 <div
                     class="card hover:shadow-xl transition-all group hover:bg-gray-50"
                 >
@@ -345,7 +355,7 @@ a {
                     </div>
                 </div>
                 <div
-                    class="card hover:shadow-xl transition-all group hover:bg-gray-50"
+                    class="card sm:row-span-2 hover:shadow-xl transition-all group hover:bg-gray-50"
                 >
                     <div class="card-body">
                         <h2 class="card-title">Morceaux choisis d'internet</h2>
